@@ -24,7 +24,8 @@
     </head>
     <body>
         <img src="taki_face.png" alt="Image">
-        <button onclick="playSound()">똬잇</button>
+        <p id="count">Count: 0</p>
+        <button onclick="playSound(); countPlus1()">똬잇</button>
         <audio id="taki" src="taki.wav"></audio>
 
         <script>
@@ -32,6 +33,13 @@
                 const sound = document.getElementById("taki");
                 sound.currentTime = 0;
                 sound.play();
+            }
+
+            let count = 0
+
+            function countPlus1() {
+                count = count + 1
+                document.getElementById("count").innerHTML = "Count: " + count;
             }
         </script>
     </body>
