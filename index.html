@@ -18,12 +18,27 @@
             img {
                  width: 479px;
                  height: 497px;
-                 margin-bottom: 20px;
+                 /*margin-bottom: 20px;*/
+                 margin-bottom: 0px;
+            }
+            
+            .Taki_spin{
+                animation: spin 1s linear infinite;
+            }
+
+            @keyframes spin{
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
             }
         </style>
     </head>
     <body>
-        <img src="taki_face.png" alt="Image">
+        <span class="Taki_spin"><img src="taki_face.png" alt="Image"></span>
+        <p><br><br><br><br></p>
         <p id="count">Count: 0</p>
         <button onclick="playSound(); countPlus1()">똬잇</button>
         <audio id="taki" src="taki.wav"></audio>
